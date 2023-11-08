@@ -44,9 +44,10 @@ def test_get_user():
 
 def test_post_user():
     scheme = load_schema('post_user.json')
-    response = requests.post(url='https://reqres.in/api/users/',
-                             json={"name": "Alex", "job": "QA"}
-                             )
+    response = requests.post(
+        url='https://reqres.in/api/users/',
+        json={"name": "Alex", "job": "QA"}
+    )
     assert response.status_code == 201
     jsonschema.validate(response.json(), scheme)
 
@@ -119,5 +120,7 @@ def test_user_unsuccessful_login():
 
 
 def test_get_delayed_response():
-    response = requests.get(url="https://reqres.in/api/users", params={"delay": 3})
+    response = requests.get(
+        url="https://reqres.in/api/users",
+        params={"delay": 3})
     assert (response.status_code == 200)
