@@ -1,0 +1,12 @@
+pytest==7.4.3
+allure-pytest==2.13.2
+selene==2.0.0rc4
+selenium==4.15.2
+python-dotenv~=1.0.0
+pathlib~=1.0.1
+pip==23.3.1
+requests==2.31.0
+
+jsonschema~=4.17.3
+utils~=1.0.1
+curlify~=2.2.1
